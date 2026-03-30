@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Company</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    font-family: Arial;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    color: white;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* WhatsApp Button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand">Travel Company</a>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero d-flex align-items-center text-center">
+<div class="container">
+<h1 class="fade-in">اكتشف العالم معانا ✈️</h1>
+<p class="fade-in">رحلات فاخرة بأسعار مش هتتكرر</p>
+<a href="https://wa.me/201XXXXXXXXX" class="btn btn-warning fade-in">احجز دلوقتي</a>
+</div>
+</section>
+
+<!-- Services -->
+<section class="container text-center my-5">
+<h2 class="fade-in">خدماتنا</h2>
+
+<div class="row mt-4">
+
+<div class="col-md-4 fade-in">
+<h4>رحلات داخلية</h4>
+<p>شرم - غردقة - دهب</p>
+</div>
+
+<div class="col-md-4 fade-in">
+<h4>رحلات خارجية</h4>
+<p>تركيا - دبي - أوروبا</p>
+</div>
+
+<div class="col-md-4 fade-in">
+<h4>حج و عمرة</h4>
+<p>برامج VIP</p>
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="bg-dark text-white text-center p-5 fade-in">
+<h2>جاهز تسافر؟</h2>
+<a href="https://wa.me/201XXXXXXXXX" class="btn btn-warning mt-3">كلمنا دلوقتي</a>
+</section>
+
+<!-- Footer -->
+<footer class="text-center p-3">
+<p>© 2026 Travel Company</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/201XXXXXXXXX" class="whatsapp">💬</a>
+
+<script>
+// Animation on scroll
+const elements = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screen = window.innerHeight;
+
+        if(position < screen - 100){
+            el.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
